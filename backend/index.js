@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
+const carRouter = require('./controllers/car')
 
 const app = express()
 require('dotenv').config()
@@ -15,6 +16,7 @@ mongoose.connect(MongoDB_URI)
     console.log('error connecting to database', error)
 })
 
+app.use('/api/cars', carRouter)
 app.listen(PORT,() => {
     console.log(`server running on port ${PORT}`)
 })
