@@ -3,6 +3,7 @@ const multer = require('multer')
 const { v4: uuidv4 } = require('uuid')
 const  path = require('path')
 const Car = require('../models/car')
+const userExtractor = require('../utilities/middleware').userExtractor
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
@@ -24,7 +25,7 @@ const fileFilter = (req, file, cb) => {
 
 let upload = multer({ storage, fileFilter })
 
-carRouter.post('/', upload.single('photo'), async(req,res)  => {
+carRouter.post('/', upload.single('photo'),userExtractor, async(req,res)  => {
     const body = req.body
     const photo = req.file.filename
     const user = req.user
@@ -43,6 +44,24 @@ carRouter.post('/', upload.single('photo'), async(req,res)  => {
     user.cars = user.cars.concat(savedCar._id)
     await user.save()
     res.json(savedCar)
+})
+
+carRouter.delete('/:id', userExtractor, async(req,res) => {
+    const reqID = req.params.id
+    const user = req.user
+    const car = await Car.findById(reqID)
+    if(car.user.toString() === user._id.toString()){
+        await Car.findByIdAndRemove(reqID)
+    }else{
+        res.status(401).json({
+            error: 'car can only be deleted by the user that post it'
+        })
+    }
+}) 
+
+carRouter.get('/', async(req,res) => {
+    const cars = await Car.find({}).populate('user', {email: 1, name: 1})
+    res.json(cars)
 })
 
 module.exports = carRouter
