@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 const uniqueValidator = require('mongoose-unique-validator')
-const { use } = require('../controllers/car')
 
 const userSchema = new mongoose.Schema({
     email:{
@@ -34,6 +33,7 @@ userSchema.set('toJSON',{
     }
 })
 userSchema.plugin(uniqueValidator)
+const User = mongoose.model('User', userSchema)
 
-module.exports = mongoose.model('User', userSchema)
+module.exports = User
 
