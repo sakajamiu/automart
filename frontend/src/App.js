@@ -1,14 +1,31 @@
-
-import './App.css';
+import React, { useEffect } from 'react'
+import './App.css'
+import LandingPage from './components/landingPage'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import Dashboard  from './components/dashboard'
+import { LoggedInUser } from './reducers/loginReducer'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(LoggedInUser())
+  }, [dispatch])
 
-      </header>
-    </div>
-  );
+  return (
+    <Router>
+
+      <Routes>
+        <Route path='/' element ={<LandingPage/>}/>
+        <Route path ='/dashboard' element = {<Dashboard/>}/>
+      </Routes>
+    </Router>
+
+  )
 }
 
-export default App;
+export default App
