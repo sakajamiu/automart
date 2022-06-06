@@ -6,19 +6,15 @@ import {  clearMessage } from '../reducers/notification'
 const Notification  = () => {
   const dispatch = useDispatch()
   const message = useSelector(state => state.notification)
-  console.log(message)
   if (message.length === 0) {
     return null
   }
+  setTimeout(() => {
+    dispatch(clearMessage())
+  }, 3000)
   return(
-    <div>
-      <Alert variant= {message.type}> {message.message}</Alert>
-      {
-        setTimeout(() => {
-          dispatch(clearMessage())
-        }, 3000)
-      }
-    </div>
+    <Alert variant= {message.type}> {message.message}</Alert>
+
   )
 
 

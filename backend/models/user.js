@@ -15,6 +15,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    photo:{
+        type: String
+    },
     cars: [
         {
             type: mongoose.Schema.Types.ObjectId,

@@ -1,0 +1,25 @@
+.userProfile{
+    width:30px
+}
+.userIcon{
+    color: #28a745;
+    cursor: pointer;
+}
+.inputForm{
+    display: none !important;
+
+}
+
+@media screen and (max-width: 1024px) {
+    .span{
+        font-size: medium;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .div{
+        float:right;
+        margin-right: 5px;
+    }
+}

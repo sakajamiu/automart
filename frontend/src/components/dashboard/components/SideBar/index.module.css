@@ -1,0 +1,31 @@
+.icon{
+    color:#28a745 !important;
+    font-size: 30px;
+    margin-left: 5px;
+}
+.offCanvas{
+    width: 50% !important;
+    background-color:#f5f5f5 !important;
+}
+.title{
+
+    border-bottom: 2px solid #e9e9e9 ;
+}
+.Row{
+    border-bottom: 1px solid #e9e9e9;
+}
+.divIcon{
+    float: right;
+    color: #28a745;
+}
+.row{
+    border-top: 1px  solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+    padding-top: 10px;
+}
+.row:nth-child(3){
+    padding-bottom: 10px;
+}
+.row:last-child{
+    border-bottom: 2px solid #e9e9e9 !important;
+}
