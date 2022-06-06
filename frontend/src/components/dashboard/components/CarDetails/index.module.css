@@ -1,0 +1,67 @@
+.cardButton{
+    float: right;
+    Background-color: #28a745 !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin-top: 0px;
+}
+
+.cardButton:hover{
+    background-color: #28a745;
+}
+
+.imageDiv{
+    width: 400px;
+    float: right;
+    margin: 10px 0px 10px 10px;
+    
+}
+.h1{
+    text-transform: uppercase;
+    color: #28a745
+}
+
+.close{
+    float: right;
+    cursor: pointer;
+}
+.modal{
+    background-color: #f5f5f5;
+    color: #000000;
+
+}
+.h4{
+    text-transform: capitalize;
+}
+.paystackButton{
+    border-color: #28a745 !important;
+    background-color: #28a745 !important;
+    color: white !important;
+}
+
+@media screen and (max-width: 768px) {
+    .imageDiv{
+        width: 200px;
+        margin-top: 25px;
+    }
+}
+@media screen and (max-width:375px) {
+    .imageDiv{
+        width: 150px;
+        margin-top: 100px;
+        
+    }
+    .p{
+        font-size: small;
+    }
+}
+@media screen and (max-width:350px) {
+    .imageDiv{
+        width: 100px;
+        margin-top: 100px;
+        
+    }
+    .p{
+        font-size: small;
+    }
+}

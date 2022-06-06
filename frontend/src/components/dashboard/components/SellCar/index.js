@@ -1,0 +1,1 @@
+export { SellCar as default } from './sellCar'

@@ -1,0 +1,1 @@
+export { DesktopView as default } from './desktopView'

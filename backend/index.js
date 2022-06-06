@@ -25,6 +25,7 @@ app.use(middleware.tokenExtractor)
 app.use('/api/users', userRouter)
 app.use('/api/cars', carRouter)
 app.use('/api/login', loginRouter)
+app.use('/api/images', express.static('images') )
 app.use(middleware.errorHandler)
 app.use(middleware.unknownEndPoint)
 app.listen(PORT,() => {

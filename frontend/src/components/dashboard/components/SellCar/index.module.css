@@ -1,0 +1,37 @@
+.button{
+    margin-top: 7px;
+}
+.modal{
+    background-color: #f5f5f5;
+    color: #000000;
+
+}
+input{
+    border-radius: 20px !important;
+}
+input:focus::-webkit-input-placeholder{
+    opacity:0  !important;
+}
+input:focus{
+    box-shadow: none !important;
+    border-color: #28a745 !important;
+}
+
+textarea:focus{
+    box-shadow: none !important;
+    border-color: #28a745 !important;
+}
+textarea:focus::-webkit-input-placeholder{
+    opacity: 0;
+}
+textarea{
+    border-radius: 10px !important;
+}
+.icon{
+    float: right;
+    color : #28a745;
+}
+.close{
+    float: right;
+    cursor: pointer;
+}

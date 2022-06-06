@@ -1,0 +1,33 @@
+.card{
+    width: 17rem !important;
+    padding-top: 15px;
+    margin-top: 25px !important;
+    margin-bottom: 5px;
+    margin-right:20px
+}
+.cardRow{
+    padding-left: 30px;
+}
+.cardTitle{
+    text-transform: capitalize;
+}
+.cardImg{
+    height: 200px;
+    margin-bottom: 15px;
+}
+.cardSpanRight{
+    float:right;
+}
+.p{
+    font-size: small;
+}
+@media screen and (max-width: 768px) {
+    .card{
+        margin-right: 0px;
+    }
+    .cardRow{
+        padding-left: 0px;
+        display: flex;
+        justify-content: space-around;
+    }
+}

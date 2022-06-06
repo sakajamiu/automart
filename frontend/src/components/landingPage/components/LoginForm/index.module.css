@@ -1,0 +1,58 @@
+.form{
+    width: 90%
+}
+.label{
+    color:#000000;
+    font-weight: 600;
+}
+.icon{
+    position: absolute;
+    color:#000000;
+    min-width: 40px;
+    margin-top: 10px;
+}
+
+.input::placeholder{
+    padding-left: 25px;
+    color:#000000;
+}
+.input{
+    background-color: transparent; 
+    border-color: #0275d8;
+}
+.input:focus{
+    padding-left: 30px;
+    border-color: none !important;
+    box-shadow: none !important;
+    background-color: transparent;
+    color:#000000;
+}
+.input:focus::-webkit-input-placeholder{
+    opacity: 0;
+}
+
+.input:not(:focus):not(:placeholder-shown){
+    padding-left: 35px;
+}
+.input:not(:focus):not(:placeholder-shown):valid{
+    border-color: green;
+}
+.input:not(:focus):not(:placeholder-shown):invalid{
+    border-color: red;
+}
+.error_message{
+    display: none;
+    color: red !important;
+}
+.input:not(:focus):not(:placeholder-shown):invalid ~ .error_message{
+    display: inline-block;
+}
+.button{
+    margin-top: 15px;
+}
+@media screen and (max-width: 600px) {
+    .form{
+        padding-left: 5px;
+        
+    }
+}
