@@ -9,8 +9,11 @@ import {
 import { useDispatch } from 'react-redux'
 import Dashboard  from './components/dashboard'
 import { LoggedInUser } from './reducers/loginReducer'
+import useMediaQuery from './utilities/mediaQuery'
 
 function App() {
+  const isMobile = useMediaQuery('(max-width: 768px)')
+  console.log(isMobile)
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(LoggedInUser())

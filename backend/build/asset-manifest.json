@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e11cc96a.css",
+    "main.js": "/static/js/main.5e19cdcc.js",
+    "static/media/johannes-plenio-RwHv7LgeC7s-unsplash.jpg": "/static/media/johannes-plenio-RwHv7LgeC7s-unsplash.2a2ca55210e8d5d309de.jpg",
+    "static/media/hakon-sataoen-qyfco1nfMtg-unsplash.jpg": "/static/media/hakon-sataoen-qyfco1nfMtg-unsplash.2153b2e18c663d62df62.jpg",
+    "static/media/logo.svg": "/static/media/logo.46bc3c180ebae72372dec7c719ed8688.svg",
+    "index.html": "/index.html",
+    "main.e11cc96a.css.map": "/static/css/main.e11cc96a.css.map",
+    "main.5e19cdcc.js.map": "/static/js/main.5e19cdcc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e11cc96a.css",
+    "static/js/main.5e19cdcc.js"
+  ]
+}
